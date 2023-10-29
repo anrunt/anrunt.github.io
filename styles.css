@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+p {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+button {
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  position: relative;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.settings:hover {
+  cursor: pointer;
+}
+
+.modal-settings {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+.input-p-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+  
+.input-p-div input {
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 5px;
+  outline: none;
+}
+
+.input-p-div {
+  color: white;
+  font-size: 15px;
+}
+
+.modal-settings button {
+  font-size: 15px;
+  padding: 5px 10px;
+  color: white;
+  background-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  box-shadow: inset 0 0 0 0 #fff;
+  transition: ease-in-out 0.3s;
+}
+
+.modal-settings button:hover {
+  box-shadow: inset 0 100px 0 0 #fff;
+  cursor: pointer;
+  color: black;
+}
+
+.checkbox-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.checkbox-div input {
+  border: 1px solid white;
+  height: 15px;
+  width: 15px;
+}
+
+.checkbox-div p {
+  color: white;
+  font-size: 15px;
+}
+
+.main-app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  width: max-content;
+  height: max-content;
+}
+
+.time-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 0px 10px;
+}
+
+.time-buttons button {
+  color: white;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  font-size: 30px;
+  box-shadow: inset 0 0 0 0 #fff;
+  transition: ease-in-out 0.3s;
+}
+
+.time-buttons button:hover {
+  box-shadow: inset 0 100px 0 0 #fff;
+  cursor: pointer;
+  color: black;
+}
+
+.focus-time,
+.short-break {
+  margin-right: 10px;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 700px;
+  height: 550px;
+  width: 550px;
+}
+
+.timer-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-div p {
+  font-size: 80px;
+  color: white;
+}
+
+.skip-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+}
+
+.skip-time:hover {
+  cursor: pointer;
+}
+
+.start-stop-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px 10px 80px;
+}
+
+.start-stop-buttons button {
+  color: white;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  font-size: 30px;
+  width: 200px;
+  box-shadow: inset 0 0 0 0 #fff;
+  transition: ease-in-out 0.3s;
+}
+
+.start-stop-buttons button:hover {
+  box-shadow: inset 0 100px 0 0 #fff;
+  cursor: pointer;
+  color: black;
+}
