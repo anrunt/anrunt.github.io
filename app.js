@@ -24,7 +24,7 @@ function checkLocalStorage() {
     FocusTimeInput.value = localStorage.getItem("FocusTime");
   } else {
     FocusTimeInput.value = 30;
-    localStorage.setItem("FocusTime", FocusTimeInput.value);
+    localStorage.setItem("FocusTime", 30);
   }
 }
 
