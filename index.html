@@ -1,60 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <title class="title">FocusTime</title>
-</head>
-<body>
-  <button data-open-modal class="settings">
-    <box-icon name='cog' color="#ffffff"></box-icon>
-  </button>
-  <dialog data-modal class="modal-settings">
-    <div class="input-p-div">
-      <p>Focus Time</p>
-      <input type="number" value="30" class="FocusTime-input" placeholder="30">
-    </div>
-    <div class="input-p-div">
-      <p>Short Break</p>
-      <input type="number" value="5" class="ShortBreak-input" placeholder="5">
-    </div>
-    <div class="input-p-div">
-      <p>Long Break</p>
-      <input type="number" value="15" class="LongBreak-input" placeholder="15">
-    </div>
-    <button data-close-modal>Exit</button>
-    <div class="checkbox-div">
-      <input type="checkbox" unchecked class="mute-sound-checkbox">
-      <p>Mute Sound</p>
-    </div>
-  </dialog>
-  <div class="main-app">
-    <div class="time-buttons">
-      <button class="focus-time">Focus Time</button>
-      <button class="short-break">Short Break</button>
-      <button class="long-break">Long Break</button>
-    </div>
-    <div class="clock">
-      <div class="circle">
-        <div class="timer-div">
-          <p class="minutes-timer">00</p>
-          <p>:</p>
-          <p class="seconds-timer">00</p>
+  <head>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
+      integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title class="title">FocusTime</title>
+  </head>
+  <body>
+    <button data-open-modal class="settings">
+      <box-icon name="cog" color="#ffffff"></box-icon>
+    </button>
+    <dialog data-modal class="modal-settings">
+      <div class="input-p-div">
+        <p>Focus Time</p>
+        <input
+          type="number"
+          value="30"
+          class="FocusTime-input"
+          placeholder="30"
+        />
+      </div>
+      <div class="input-p-div">
+        <p>Short Break</p>
+        <input
+          type="number"
+          value="5"
+          class="ShortBreak-input"
+          placeholder="5"
+        />
+      </div>
+      <div class="input-p-div">
+        <p>Long Break</p>
+        <input
+          type="number"
+          value="15"
+          class="LongBreak-input"
+          placeholder="15"
+        />
+      </div>
+      <button data-close-modal>Exit</button>
+      <div class="checkbox-div">
+        <input type="checkbox" unchecked class="mute-sound-checkbox" />
+        <p>Mute Sound</p>
+      </div>
+    </dialog>
+    <div class="main-app">
+      <div class="time-buttons">
+        <button class="focus-time">Focus Time</button>
+        <button class="short-break">Short Break</button>
+        <button class="long-break">Long Break</button>
+      </div>
+      <div class="clock">
+        <div class="circle">
+          <div class="timer-div">
+            <p class="minutes-timer">00</p>
+            <p>:</p>
+            <p class="seconds-timer">00</p>
+          </div>
+          <button class="skip-time">
+            <box-icon name="right-arrow-alt" color="#ffffff"></box-icon>
+          </button>
         </div>
-        <button class="skip-time">
-          <box-icon name='right-arrow-alt' color="#ffffff"></box-icon>
-        </button>
+      </div>
+      <div class="start-stop-buttons">
+        <button class="start">START</button>
+        <button class="stop">STOP</button>
       </div>
     </div>
-    <div class="start-stop-buttons">
-      <button class="start">START</button>
-      <button class="stop">STOP</button>
-    </div>
-  </div>
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
