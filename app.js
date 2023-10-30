@@ -21,23 +21,26 @@ const LongBreakInput = document.querySelector(".LongBreak-input");
 
 
 function checkLocalStorage() {
-  if (localStorage.getItem("FocusTime") !== null ) {
-    FocusTimeInput.value = localStorage.getItem("FocusTime");
+  if (localStorage.getItem("LongBreakTime") !== null ) {
+    LongBreakInput.value = localStorage.getItem("LongBreakTime");
+    longBreakFunc();
   } else {
-    FocusTimeInput.value = 30;
-    localStorage.setItem("FocusTime", 30);
+    LongBreakInput.value = 15;
+    localStorage.setItem("LongBreakTime", 15);
   }
   if (localStorage.getItem("ShortBreakTime") !== null) {
     ShortBreakInput.value = localStorage.getItem("ShortBreakTime");
+    shortBreakFunc();
   } else {
     ShortBreakInput.value = 5;
     localStorage.setItem("ShortBreakTime", 5);
   }
-  if (localStorage.getItem("LongBreakTime") !== null) {
-    LongBreakInput.value = localStorage.getItem("LongBreakTime");
+  if (localStorage.getItem("FocusTime") !== null) {
+    FocusTimeInput.value = localStorage.getItem("FocusTime");
+    focusTimeFunc();
   } else {
-    LongBreakInput.value = 15;
-    localStorage.setItem("LongBreakTime", 15);
+    FocusTimeInput.value = 30;
+    localStorage.setItem("FocusTime", 30);
   }
 }
 
@@ -111,6 +114,7 @@ timerStop.addEventListener("click", () => {
 
 function focusTimeFunc() {
   minutesCount = FocusTimeInput.value;
+  title.textContent = `${FocusTimeInput.value}:00`;
   startingValue = FocusTimeInput.value;
   totalSeconds = minutesCount * 60;
   minutesTimer.textContent = `${FocusTimeInput.value
@@ -121,6 +125,7 @@ function focusTimeFunc() {
 
 function shortBreakFunc() {
   minutesCount = ShortBreakInput.value;
+  title.textContent = `${ShortBreakInput.value}:00`;
   startingValue = ShortBreakInput.value;
   totalSeconds = minutesCount * 60;
   minutesTimer.textContent = `${ShortBreakInput.value
@@ -131,6 +136,7 @@ function shortBreakFunc() {
 
 function longBreakFunc() {
   minutesCount = LongBreakInput.value;
+  title.textContent = `${LongBreakInput.value}:00`;
   startingValue = LongBreakInput.value;
   totalSeconds = minutesCount * 60;
   minutesTimer.textContent = `${LongBreakInput.value
