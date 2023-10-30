@@ -19,6 +19,7 @@ const FocusTimeInput = document.querySelector(".FocusTime-input");
 const ShortBreakInput = document.querySelector(".ShortBreak-input");
 const LongBreakInput = document.querySelector(".LongBreak-input");
 
+
 function checkLocalStorage() {
   if (localStorage.getItem("FocusTime") !== null ) {
     FocusTimeInput.value = localStorage.getItem("FocusTime");
@@ -154,7 +155,7 @@ exitSettings.addEventListener("click", () => {
   modalSettings.style.display = "none";
   localStorage.setItem("FocusTime", FocusTimeInput.value);
   localStorage.setItem("ShortBreakTime", ShortBreakInput.value);
-  localStorage.setItem("LongBreaktime", LongBreakInput.value);
+  localStorage.setItem("LongBreakTime", LongBreakInput.value);
   document.location.reload();
 });
 
