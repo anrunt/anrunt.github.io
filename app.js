@@ -19,16 +19,8 @@ const FocusTimeInput = document.querySelector(".FocusTime-input");
 const ShortBreakInput = document.querySelector(".ShortBreak-input");
 const LongBreakInput = document.querySelector(".LongBreak-input");
 
-function checkLocalStorage() {
-  if (localStorage.getItem("FocusTime") === null ) {
-    FocusTimeInput.value = 30;
-    localStorage.setItem("FocusTime", 30);
-  } else {
-    FocusTimeInput.value = localStorage.getItem("FocusTime");
-  }
-}
 
-//FocusTimeInput.value = localStorage.getItem("FocusTime");
+FocusTimeInput.value = localStorage.getItem("FocusTime");
 ShortBreakInput.value = localStorage.getItem("ShortBreakTime");
 LongBreakInput.value = localStorage.getItem("LongBreaktime");
 
@@ -168,5 +160,3 @@ skipTimeButton.addEventListener("click", () => {
     focusTimeFunc();
   }
 });
-
-checkLocalStorage();
