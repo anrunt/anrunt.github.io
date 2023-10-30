@@ -19,10 +19,26 @@ const FocusTimeInput = document.querySelector(".FocusTime-input");
 const ShortBreakInput = document.querySelector(".ShortBreak-input");
 const LongBreakInput = document.querySelector(".LongBreak-input");
 
-
-FocusTimeInput.value = localStorage.getItem("FocusTime");
-ShortBreakInput.value = localStorage.getItem("ShortBreakTime");
-LongBreakInput.value = localStorage.getItem("LongBreaktime");
+function checkLocalStorage() {
+  if (localStorage.getItem("FocusTime") !== null ) {
+    FocusTimeInput.value = localStorage.getItem("FocusTime");
+  } else {
+    FocusTimeInput.value = 30;
+    localStorage.setItem("FocusTime", 30);
+  }
+  if (localStorage.getItem("ShortBreakTime") !== null) {
+    ShortBreakInput.value = localStorage.getItem("ShortBreakTime");
+  } else {
+    ShortBreakInput.value = 5;
+    localStorage.setItem("ShortBreakTime", 5);
+  }
+  if (localStorage.getItem("LongBreakTime") !== null) {
+    LongBreakInput.value = localStorage.getItem("LongBreakTime");
+  } else {
+    LongBreakInput.value = 15;
+    localStorage.setItem("LongBreakTime", 15);
+  }
+}
 
 minutesTimer.textContent = `${FocusTimeInput.value
   .toString()
@@ -160,3 +176,5 @@ skipTimeButton.addEventListener("click", () => {
     focusTimeFunc();
   }
 });
+
+checkLocalStorage();
