@@ -58,9 +58,7 @@ function updateTimeDisplay(seconds) {
   const remainingSeconds = seconds % 60;
   minutesTimer.textContent = minutes.toString().padStart(2, "0");
   secondsTimer.textContent = remainingSeconds.toString().padStart(2, "0");
-  title.textContent = `${minutes.toString().padStart(2, "0")}:${remainingSeconds
-    .toString()
-    .padStart(2, "0")}`;
+  title.textContent = `${minutes.toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
 }
 
 let countTime;
@@ -162,16 +160,27 @@ exitSettings.addEventListener("click", () => {
   localStorage.setItem("FocusTime", FocusTimeInput.value);
   localStorage.setItem("ShortBreakTime", ShortBreakInput.value);
   localStorage.setItem("LongBreakTime", LongBreakInput.value);
+  localStorage.setItem("CheckBoxChecked", checkCheckBox());
+  loadCheck();
   document.location.reload();
 });
 
-muteCheckbox.addEventListener("change", () => {
+function checkCheckBox() {
   if (muteCheckbox.checked) {
-    sound.mute(true);
+    return true;
   } else {
+    return false;
+  }
+}
+
+function loadCheck() {
+  if (localStorage.getItem("CheckBoxChecked") === "true") {
+    muteCheckbox.checked = true;
+    sound.mute(true);
+  } else if (localStorage.getItem("CheckBoxChecked") === "false") {
     sound.mute(false);
   }
-});
+}
 
 skipTimeButton.addEventListener("click", () => {
   clearInterval(countTime);
@@ -184,4 +193,5 @@ skipTimeButton.addEventListener("click", () => {
   }
 });
 
+loadCheck();
 checkLocalStorage();
