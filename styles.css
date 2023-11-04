@@ -223,5 +223,69 @@ body {
 }
 
 @media (max-width: 654px) {
-    
+  .main-app {
+    width: 350px;
+  }
+  
+  .time-buttons {
+    flex-direction: column;
+    padding: 10px 0px 0px 0px;
+  }
+
+  .focus-time,
+  .short-break {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  .time-buttons button {
+    width: 250px;
+  }
+
+  .timer-div {
+    flex-direction: column;
+  }
+
+  .timer-div p {
+    font-size: 150px;
+    line-height: 1;
+  }
+
+  .timer-div p:nth-child(2) {
+    display: none;
+  }
+
+  .clock {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .circle {
+    border: none;
+    height: max-content;
+    justify-content: flex-start;
+  }
+
+  .skip-time {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .start-stop-buttons {
+    justify-content: center;
+    padding: 0px;
+    margin: 0px 10px 10px 10px;
+  }
+
+  .start-stop-buttons button {
+    width: 150px;
+  }
+
+  .start {
+    margin-right: 10px;
+  }
+
+  .stop {
+    margin-left: 10px;
+  }
 }
