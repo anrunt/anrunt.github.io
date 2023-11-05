@@ -103,11 +103,13 @@ timerStart.addEventListener("click", function () {
   go();
   countTime = setInterval(go, 1000);
   sound.play();
+  timerStart.disabled = true;
 });
 
 timerStop.addEventListener("click", () => {
   clearInterval(countTime);
   sound.play();
+  timerStart.disabled = false;
 });
 
 function focusTimeFunc() {
@@ -184,6 +186,7 @@ function loadCheck() {
 
 skipTimeButton.addEventListener("click", () => {
   clearInterval(countTime);
+  timerStart.disabled = false;  
   if (startingValue === FocusTimeInput.value) {
     shortBreakFunc();
   } else if (startingValue === ShortBreakInput.value) {
