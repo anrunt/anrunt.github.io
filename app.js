@@ -72,6 +72,7 @@ function go() {
   if (totalSeconds < 0) {
     clearInterval(countTime);
     alarm.play();
+    timerStart.disabled = false;
     if (startingValue === FocusTimeInput.value) {
       shortBreakFunc();
     } else if (startingValue === ShortBreakInput.value) {
